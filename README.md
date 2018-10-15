@@ -15,9 +15,14 @@ Currently, you can port ROS_M using FreeRTOS and lwip on an embedded platform, o
 ## How To Use It
 
 ### Used in Embedded
-1. 
-2. 
-3. 
+1. Download vmware workstation player from https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
+2. Download linux OS image(Ubuntu 14.04.5 LTS) from https://www.ubuntu.com/download/alternative-downloads and create virtual computer.
+3. Refer to http://wiki.ros.org/indigo/Installation/Ubuntu to install ROS Indigo.
+4. Clone this repositories to your local repository.
+5. Select "SYSTEM := CortexM4" in Makefile by # comment.
+6. Build this project.
+7. Download .bin file to target embedded system using flash downloader program.
+8. Execute in your Embedded platform.
 
 ### Used in Linux
 1. Download vmware workstation player from https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
@@ -26,7 +31,7 @@ Currently, you can port ROS_M using FreeRTOS and lwip on an embedded platform, o
 4. Clone this repositories to your local repository.
 5. Select "SYSTEM := LINUX" in Makefile by # comment.
 6. Build this project.
-7. Execute.
+7. Execute in your PC.
 
 
 
