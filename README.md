@@ -20,6 +20,6 @@ Currently, you can port ROS_M using FreeRTOS and lwip on an embedded platform, o
 3. 
 
 ### Used in Linux
-1. 
-2. 
-3. 
+1. Download vmware workstation player from https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
+2. Download linux OS image(Ubuntu 14.04.5 LTS) from https://www.ubuntu.com/download/alternative-downloads and create virtual computer.
+3. Install ROS indigo version
