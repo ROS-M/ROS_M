@@ -54,8 +54,8 @@ int main(int argc, char** argv)
 	ros_m_init(argc, argv, "node_A");
 	ros_m_nodeHandle_init();
 
-	ros_m_nodeHandle_advertise(ros_m_message_create_message_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_A", 5, 0);
-	ros_m_nodeHandle_subscribe(ros_m_message_create_message_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_B", 5, callback);
+	ros_m_nodeHandle_advertise(ros_m_message_create_msg_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_A", 5, 0);
+	ros_m_nodeHandle_subscribe(ros_m_message_create_msg_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_B", 5, callback);
 
 	msg1 m;
 
