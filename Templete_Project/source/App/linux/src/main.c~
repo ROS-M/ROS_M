@@ -1,0 +1,35 @@
+#include "ros_m_portable.h"
+#include "msg_file.h"
+
+
+void callback(msg1* m)
+{
+	printf("callback : %d, %d\n", m -> data2, m -> data1);
+}
+
+
+int main(int argc, char** argv)
+{
+	ros_m_init(argc, argv, "node_A");
+	ros_m_nodeHandle_init();
+
+	ros_m_nodeHandle_advertise(ros_m_message_create_message_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_A", 5, 0);
+	ros_m_nodeHandle_subscribe(ros_m_message_create_message_file("ttt", "d818ecfc1a897d729b61116f6ea3d038", "int8 data1\r\nint32 data2"), "topic_B", 5, callback);
+
+	msg1 m;
+
+	m.data1 = 5;
+ 	m.data2 = 5;
+
+
+	while(ros_m_ok())
+	{
+		ros_m_spinOnce();
+		m.data1++;
+ 		m.data2++;
+		ros_m_nodeHandle_publish("topic_A", (void*)&m);
+	}
+
+
+	return 0;
+}
