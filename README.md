@@ -1,6 +1,6 @@
 # GUIDE TO 'ROS_M'
 
-## Forder Description
+## Folder Description
 
 ### build Folder
 You can use the 'Makefile' to build the source code in the source folder. You can select the target platform (Embedded or PC) using # annotations.
